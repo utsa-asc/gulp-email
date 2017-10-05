@@ -1,1 +1,9 @@
 node_modules
+__gulp-email__
+
+a simple repository for working on email templates
+
+- npm install
+- to serve html locally, > gulp
+- to send test email, > gulp email
+- to update send settings, edit the email task in gulpfile.js
