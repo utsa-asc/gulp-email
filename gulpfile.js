@@ -9,8 +9,12 @@ var smtpInfo = {
   port: 25
 };
 
+var src = {
+  html: "app/*.html"
+};
+
 gulp.task('email', function () {
-  return gulp.src('./app/index.html')
+  return gulp.src('./app/test.html')
     .pipe(email({
       subject: 'We are UTSA! - GULP EMAIL',
       to: [
