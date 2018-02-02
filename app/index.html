@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>UTSA Top Headlines</title>
 <meta charset="utf-8"/>
 <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" name="viewport"/>
-<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" name="viewport"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <style type="text/css">
 /* OBLIGATORY EMAIL STYLES SO I DON'T GO CRAZY */
 #outlook a{padding:0;}
@@ -20,33 +19,71 @@ img{-ms-interpolation-mode:bicubic;}
 body{margin:0; padding:0;}
 img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
 table{border-collapse:collapse !important;}
-body{height:100% !important; margin:0; padding:0; width:100% !important;background-color:#FFF;
+body{height:100% !important; margin:0; padding:0; width:100% !important;background-color:#FFF;}
+li {
+  font-size: 0.9167em!important;
 }
 
 p{
+  font-size: 0.9167em!important;
+  font-family:Arial, Helvetica, sans-serif;
   padding:0;
   margin:0;
 }
+td.side {
+  max-width:2.5vw!important;
+}
+
+td#content {
+  width:100%!important;
+  font-size: 1.1rem;
+}
+
+#masthead img {
+  width: 100%!important;
+}
+
+span {
+  font-size: 0.9167em!important;
+  line-height:2.5rem;
+}
+li {
+  font-size: 0.9167em!important;
+}
+p{
+  font-size: 0.9167em!important;
+  line-height: 1.25;
+  padding-top:0;
+  margin-top:0;
+  font-family:Arial, Helvetica, sans-serif;
+  padding-bottom: 0.5rem!important;
+}
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 600px) {
-  #container table {
-    width:100vw!important;
-  }
-
   td#content {
     width:100%!important;
     font-size: 1.1rem;
   }
-
-  #headlines table {
-    width: 95vw!important;
-  }
-  .side {
-    width:2.5vw!important;
-  }
-
-  .headerImage {
+  #masthead img {
     width: 100%!important;
+  }
+  td.side {
+    width:2.5%!important;
+  }
+  span {
+    font-size: 0.9167em!important;
+    line-height:2.5rem;
+  }
+  li {
+    font-size: 0.9167em!important;
+  }
+  p{
+    font-size: 0.9167em!important;
+    line-height: 1.25;
+    padding-top:0;
+    margin-top:0;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 0.5rem!important;
   }
 
   .section {
@@ -60,22 +97,22 @@ p{
     letter-spacing: 0.099em!important;
   }
 
-        .header, .footer{
-                font-family:Arial, Helvetica, sans-serif;
-                text-transform:normal;
-                color:#000;
-                font-size: 0.875em!important;
-                line-height: 1.1rem!important;
-        }
+  .header, .footer{
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:normal;
+    color:#000;
+    font-size: 0.875em!important;
+    line-height: 1.1rem!important;
+  }
 
   .headline {
     font-family:Arial, Helvetica, sans-serif;
     text-transform:normal;
     color:#000;
-                font-size: 1.1em!important;
-                line-height: 1.5rem!important;
-                margin:0!important;
-                padding:0!important;
+    font-size: 1.1em!important;
+    line-height: 1.5rem!important;
+    margin:0!important;
+    padding:0!important;
   }
 
   .source {
@@ -83,10 +120,10 @@ p{
     text-transform:normal;
     color:#000;
     font-weight: 600!important;
-                font-size: 0.9167em!important;
-                line-height: 1.5rem!important;
-                margin:0!important;
-                padding:0!important;
+    font-size: 0.9167em!important;
+    line-height: 1.5rem!important;
+    margin:0!important;
+    padding:0!important;
   }
 
   .byline {
@@ -94,10 +131,10 @@ p{
     text-transform:normal;
     color:#000;
     font-weight: 300!important;
-                font-size: 0.9167em!important;
-                line-height: 1.5rem!important;
-                margin:0!important;
-                padding:0!important;
+    font-size: 0.9167em!important;
+    line-height: 1.5rem!important;
+    margin:0!important;
+    padding:0!important;
   }
 
   div.storyContainer {
@@ -105,7 +142,7 @@ p{
   }
 
   span {
-                font-size: 0.9167em!important;
+    font-size: 0.9167em!important;
     line-height:2.5rem;
   }
 
@@ -114,253 +151,263 @@ p{
   }
 
   p{
-                font-size: 0.9167em!important;
+    font-size: 0.9167em!important;
     line-height: 1.25;
     padding-top:0;
     margin-top:0;
-    font-family: arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     padding-bottom: 0.5rem!important;
   }
 
   p.link {
-                font-size: 0.9167em!important;
+    font-size: 0.9167em!important;
   }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width: 600px) and (max-width:1024px) {
-  #container table {
-    width:100vw!important;
+  td#content {
+    width:100%!important;
+    font-size: 1.1rem;
+  }
+  #masthead img {
+    width: 100%!important;
+  }
+  .side {
+    width:5%!important;
+  }
+  span {
+    font-size: 0.9167em!important;
+    line-height:2.5rem;
+  }
+  li {
+    font-size: 0.9167em!important;
+  }
+  p{
+    font-size: 0.9167em!important;
+    line-height: 1.25;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 0.5rem!important;
   }
 
-    #content {
-      width:90vw!important;
-      font-size: 1.1rem;
-    }
+  .section {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    color:#f15a22;
+    margin-top: 0;
+    letter-spacing: 0.0925em;
+    font-size: 1.15rem!important;
+    letter-spacing: 0.099em!important;
+  }
 
-    #content table {
-      width:90vw!important;
-    }
+  .header, .footer{
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:normal;
+    color:#000;
+    font-size: 0.875em!important;
+    line-height: 1.1rem!important;
+  }
 
-    #headlines table {
-      width:90vw!important;
-    }
-    .side {
-      width:10vw!important;
-    }
+  .headline {
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:normal;
+    color:#000;
+    font-size: 1.1em!important;
+    line-height: 1.5rem!important;
+    margin:0!important;
+    padding:0!important;
+  }
 
-    .headerImage {
-      width:90vw!important;
-    }
-                .section {
-            font-family:Arial, Helvetica, sans-serif;
-            font-weight:900;
-            text-transform:uppercase;
-            color:#f15a22;
-            margin-top: 0;
-            letter-spacing: 0.0925em;
-            font-size: 1.15rem!important;
-            letter-spacing: 0.099em!important;
-          }
+  .source {
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:normal;
+    color:#000;
+    font-weight: 600!important;
+    font-size: 0.9167em!important;
+    line-height: 1.5rem!important;
+    margin:0!important;
+    padding:0!important;
+  }
 
-                .header, .footer{
-                        font-family:Arial, Helvetica, sans-serif;
-                        text-transform:normal;
-                        color:#000;
-                        font-size: 0.875em!important;
-                        line-height: 1.1rem!important;
-                }
+  .byline {
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:normal;
+    color:#000;
+    font-weight: 300!important;
+    font-size: 0.9167em!important;
+    line-height: 1.5rem!important;
+    margin:0!important;
+    padding:0!important;
+  }
 
-          .headline {
-            font-family:Arial, Helvetica, sans-serif;
-            text-transform:normal;
-            color:#000;
-                font-size: 1.1em!important;
-                        line-height: 1.5rem!important;
-                        margin:0!important;
-                        padding:0!important;
-          }
+  div.storyContainer {
+    padding-bottom:0.5rem;!important;
+  }
 
-          .source {
-            font-family:Arial, Helvetica, sans-serif;
-            text-transform:normal;
-            color:#000;
-            font-weight: 600!important;
-                        font-size: 0.9167em!important;
-                        line-height: 1.5rem!important;
-                        margin:0!important;
-                        padding:0!important;
-          }
+  span {
+    font-size: 0.9167em!important;
+    line-height:2.5rem;
+  }
 
-          .byline {
-            font-family:Arial, Helvetica, sans-serif;
-            text-transform:normal;
-            color:#000;
-            font-weight: 300!important;
-                        font-size: 0.9167em!important;
-                        line-height: 1.5rem!important;
-                        margin:0!important;
-                        padding:0!important;
-          }
+  .sectionLine {
+    height:3px!important;
+  }
 
-          div.storyContainer {
-            padding-bottom:0.5rem;!important;
-          }
+  p{
+    font-size: 0.9167em!important;
+    line-height: 1.25;
+    padding-top:0;
+    margin-top:0;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 0.5rem!important;
+  }
 
-          span {
-                        font-size: 0.9167em!important;
-            line-height:2.5rem;
-          }
-
-          .sectionLine {
-            height:3px!important;
-          }
-
-          p{
-                        font-size: 0.9167em!important;
-            line-height: 1.25;
-            padding-top:0;
-            margin-top:0;
-            font-family: arial, sans-serif;
-            padding-bottom: 0.5rem!important;
-          }
-
-          p.link {
-                        font-size: 0.9167em!important;
-          }
+  p.link {
+    font-size: 0.9167em!important;
+  }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width: 1024px) {
-  table#container {
-    width:100vw!important;
+  td#content {
+    width:100%!important;
+    font-size: 1.1rem;
+  }
+  #masthead img {
+    width: 100%!important;
   }
 
-    #content {
-      width:50vw!important;
-      font-size: 1.1rem;
-    }
+  table#masthead {
+    width: 100%;
+  }
+  .side {
+    width:25%!important;
+  }
+  span {
+    font-size: 1.1rem!important;
+    line-height:2.5rem;
+  }
+  li {
+    font-size: 1.1rem!important;
+  }
+  p{
+    font-size: 1.1rem!important;
+    line-height: 1.25;
+    padding-top:0;
+    margin-top:0;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 0.5rem!important;
+  }
 
-    #content table {
-      width:100%;
-    }
+  .section {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:900;
+    text-transform:uppercase;
+    color:#f15a22;
+    margin-top: 0;
+    letter-spacing: 0.0925em;
+    font-size: 1.15rem!important;
+    letter-spacing: 0.099em!important;
+  }
 
-    #headlines table {
-      width: 80vw!important;
-    }
+  .header, .footer{
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:normal;
+    color:#000;
+    font-size: 0.875em!important;
+    line-height: 1.1rem!important;
+  }
 
-    .side {
-      width:25vw!important;
-    }
+  .headline {
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:normal;
+    color:#000;
+    font-size: 1.1em!important;
+    line-height: 1.5rem!important;
+    margin:0!important;
+    padding:0!important;
+  }
 
+  .source {
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:normal;
+    color:#000;
+    font-weight: 600!important;
+    font-size: 0.9167em!important;
+    line-height: 1.5rem!important;
+    margin:0!important;
+    padding:0!important;
+  }
 
-    .headerImage {
-      width:100%;
-    }
+  .byline {
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:normal;
+    color:#000;
+    font-weight: 300!important;
+    font-size: 0.9167em!important;
+    line-height: 1.5rem!important;
+    margin:0!important;
+    padding:0!important;
+  }
 
-                .section {
-                        font-family:Arial, Helvetica, sans-serif;
-                        font-weight:900;
-                        text-transform:uppercase;
-                        color:#f15a22;
-                        margin-top: 0;
-                        letter-spacing: 0.0925em;
-                        font-size: 1.15rem!important;
-                        letter-spacing: 0.099em!important;
-                }
+  div.storyContainer {
+    padding-bottom:0.5rem;!important;
+  }
 
-                .header, .footer{
-                        font-family:Arial, Helvetica, sans-serif;
-                        text-transform:normal;
-                        color:#000;
-                        font-size: 0.875em!important;
-                        line-height: 1.1rem!important;
-                }
+  span {
+    font-size: 0.9167em!important;
+    line-height:2.5rem;
+  }
 
-                .headline {
-                        font-family:Arial, Helvetica, sans-serif;
-                        text-transform:normal;
-                        color:#000;
-                font-size: 1.1em!important;
-                        line-height: 1.5rem!important;
-                        margin:0!important;
-                        padding:0!important;
-                }
+  .sectionLine {
+    height:3px!important;
+  }
 
-                .source {
-                        font-family:Arial, Helvetica, sans-serif;
-                        text-transform:normal;
-                        color:#000;
-                        font-weight: 600!important;
-                        font-size: 0.9167em!important;
-                        line-height: 1.5rem!important;
-                        margin:0!important;
-                        padding:0!important;
-                }
+  p{
+    font-size: 0.9167em!important;
+    line-height: 1.25;
+    padding-top:0;
+    margin-top:0;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 0.5rem!important;
+  }
 
-                .byline {
-                        font-family:Arial, Helvetica, sans-serif;
-                        text-transform:normal;
-                        color:#000;
-                        font-weight: 300!important;
-                        font-size: 0.9167em!important;
-                        line-height: 1.5rem!important;
-                        margin:0!important;
-                        padding:0!important;
-                }
+  p.link {
+    font-size: 0.9167em!important;
+  }
 
-                div.storyContainer {
-                        padding-bottom:0.5rem;!important;
-                }
-
-                span {
-                        font-size: 0.9167em!important;
-                        line-height:2.5rem;
-                }
-
-                .sectionLine {
-                        height:3px!important;
-                }
-
-                p{
-                        font-size: 0.9167em!important;
-                        line-height: 1.25;
-                        padding-top:0;
-                        margin-top:0;
-                        font-family: arial, sans-serif;
-                        padding-bottom: 0.5rem!important;
-                }
-
-                p.link {
-                        font-size: 0.9167em!important;
-                }
 }
 </style>
 </head>
 <body>
-<table border="0" cellpadding="0" cellspacing="0" id="container" style="font-family:Arial, Helvetica, sans-serif; max-width:95vw!important;">
-<tr>
-<td class="side" width="50%"></td>
-<td id="content" style="max-width:90%!important;padding:0 3%;" width="800">
+  <style>
+  [owa] .side {
+      width: 2.5%!important;
+    }
+  </style>
+  <table border="0" cellpadding="0" cellspacing="0" id="container" style="font-family: 'Times New Roman', Georgia, Serif;">
+    <tbody>
+      <tr>
+        <!--[if !mso]><!-->
+        <td class="side" id="leftside"></td>
+        <!--<![endif]-->
+        <!--[if gte mso 9]>
+        <td class="side" id="leftside" width="50%"></td>
+        <![endif]-->
+        <td class="center" style="min-width:90%;">
 
-
-
-
-<table border="0" cellpadding="0" cellspacing="0" style="padding: 0px 0px 10px 0px;max-width:100%!important;">
+<table border="0" cellpadding="0" cellspacing="0" class="masthead" id="masthead" style="font-family:Arial, Helvetica, sans-serif;">
+  <tbody>
     <tr>
       <td>
-		<img alt="UTSA Top Headlines" class="headerImage" src="http://www.utsa.edu/emails/NEWS/img/common/UTSA-TOP-HEADLINES.png" style="max-width:100%!important;" width="800"/>
+        	<img alt="UTSA Top Headlines" class="headerImage" src="http://www.utsa.edu/emails/NEWS/img/common/UTSA-TOP-HEADLINES.png" style="width:100%"/>
       </td>
-	</tr>
+	   </tr>
+   </tbody>
 </table>
 
-
-
-
-
-
-
-
-
-<table border="0" cellpadding="0" cellspacing="0" id="headline" style="line-height: 18px; padding: 0px 0px 10px 0px;max-width:100%!important;">
+<table border="0" cellpadding="0" cellspacing="0" id="content" class="content" style="background-color:#FFF;">
+  <tbody>
     <tr>
       <td>
   		<p class="header" style="font-style:italic;font-size:11pt;font-family:Arial, Helvetica, sans-serif;text-transform:normal;color:#000;padding-top:7px;margin-top:7px;padding-bottom:7px;margin-bottom:7px">
@@ -368,201 +415,90 @@ p{
         </p>
       </td>
     </tr>
-            <tr>
-          <td class="sectionLine" style="line-height:1px;background:#f15a22; border:solid 1px #f15a22; border-width:1px 0 0 0; height:1px; width:100%; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;"></td>
-        </tr>
-        <tr>
-          <td style="line-height:18px;padding-bottom:10px;">
-            <span class="section" style="font-size:18px;font-family:Arial, Helvetica, sans-serif;font-weight:900;text-transform:uppercase;color:#f15a22;margin-top: 0;letter-spacing: 0.0925em;">UTSA in the News</span>
-          </td>
-        </tr>
-                        <tr>
-        <td style="line-height:18px;padding:0px 0px 18px 0px;">
-            <div class="storyContainer">
-                <div>
-                                        <p class="headline" style="font-size: 12.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.15em;margin-top:0.3em;margin-bottom:0.3em;">UTSA receives $200,000 grant for cancer drug research</p>
-                                                                                <p class="source" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">Health Medicine Network</p>
-                                    </div>
-                <div style="padding:0;font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;margin-top:0.5rem;line-height:1.25em;margin-top:0;">
-                                        <p>
-                        Doug Frantz, the Max and Minnie Tomerlin Voelcker Distinguished Professor in Chemistry at The University of Texas at San Antonio (UTSA), has received a $200,000 grant from the Cancer Prevention Research Institute of Texas (CPRIT) to support his research with April Risinger, assistant professor of pharmacology at UT Health San Antonio, to create new cancer drugs from complex natural products that have proven to be enormously effective in fighting the most aggressive types of cancer. “The cancer research underway by Dr. Frantz and Dr. Risinger is a wonderful example of how UTSA and UT Health are collaborating to build a knowledge economy in San Antonio,” said George Perry, Semmes Foundation Distinguished University Chair in Neurobiology and dean of the UTSA College of Sciences.
-                    </p>
-                                                            <p class="link">
-                        <a href="http://healthmedicinet.com/i/utsa-receives-200000-grant-for-cancer-drug-research" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;">http://healthmedicinet.com/i/utsa-receives-200000-grant-for-cancer-drug-research</a>
-                    </p>
-                                    </div>
-            </div>
-        </td>
+    <tr>
+      <td class="sectionLine" style="line-height:1px;background:#f15a22; border:solid 1px #f15a22; border-width:1px 0 0 0; height:1px; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;"></td>
     </tr>
-                        <tr>
-        <td style="line-height:18px;padding:0px 0px 18px 0px;">
-            <div class="storyContainer">
-                <div>
-                                        <p class="headline" style="font-size: 12.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.15em;margin-top:0.3em;margin-bottom:0.3em;">After bye week, Roadrunners focused on C-USA opener</p>
-                                                            <p class="byline" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">By John Whisler</p>
-                                                            <p class="source" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">San Antonio Express-News</p>
-                                    </div>
-                <div style="padding:0;font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;margin-top:0.5rem;line-height:1.25em;margin-top:0;">
-                                        <p>
-                        Coming off their bye week, the UTSA Roadrunners have not had a problem when it comes to focus. The reason? Their coach, Frank Wilson, said it’s because conference action is about to commence. UTSA (3-0) is preparing to begin play in Conference USA on Saturday when it hosts the Southern Miss Golden Eagles (2-2) in a 6 p.m. kickoff at the Alamodome. “We’re 0-0 (in conference),” Wilson said at his weekly news conference. “At the start of the year, one of our goals was to win the West (division) and make it to the conference championship game. That goal is still intact.”
-                    </p>
-                                                            <p class="link">
-                        <a href="http://www.expressnews.com/sports/article/After-bye-week-Roadrunners-focused-on-C-USA-12246998.php?t=b3fa99a6cefd8c25ff&amp;cmpid=email-premium" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;">http://www.expressnews.com/sports/article/After-bye-week-Roadrunners-focused-on-C-USA-12246998.php?t=b3fa99a6cefd8c25ff&amp;cmpid=email-premium</a>
-                    </p>
-                                    </div>
-            </div>
-        </td>
+    <tr>
+      <td style="line-height:18px;padding-bottom:10px;">
+        <span class="section" style="font-size:18px;font-family:Arial, Helvetica, sans-serif;font-weight:900;text-transform:uppercase;color:#f15a22;margin-top: 0;letter-spacing: 0.0925em;">UTSA in the News</span>
+      </td>
     </tr>
-
-            <tr>
-          <td class="sectionLine" style="line-height:1px;background:#f15a22; border:solid 1px #f15a22; border-width:1px 0 0 0; height:1px; width:100%; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;"></td>
-        </tr>
-        <tr>
+    <tr>
+          <td class="sectionLine" style="line-height:1px;background:#f15a22; border:solid 1px #f15a22; border-width:1px 0 0 0; height:1px; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;"></td>
+    </tr>
+    <tr>
           <td style="line-height:18px;padding-bottom:10px;">
             <span class="section" style="font-size:18px;font-family:Arial, Helvetica, sans-serif;font-weight:900;text-transform:uppercase;color:#f15a22;margin-top: 0;letter-spacing: 0.0925em;">UTSA Today Articles</span>
           </td>
-        </tr>
-                        <tr>
-        <td style="line-height:18px;padding:0px 0px 18px 0px;">
-            <div class="storyContainer">
-                <div>
-                                        <p class="headline" style="font-size: 12.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.15em;margin-top:0.3em;margin-bottom:0.3em;">Science students from around the country and Mexico to showcase their research at UTSA</p>
-                                                            <p class="byline" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">By Courtney Clevenger </p>
-                                                            <p class="source" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">UTSA Today</p>
-                                    </div>
-                <div style="padding:0;font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;margin-top:0.5rem;line-height:1.25em;margin-top:0;">
-                                        <p>
-                        The University of Texas at San Antonio (UTSA) will transform into a student researcher’s paradise next week as UTSA hosts the College of Sciences Research Conference. More than 1,000 undergraduate and graduate students from UTSA, 10 other Texas institutions, and universities in California, New York and Mexico will present their research at the conference on Friday, Oct. 6 from 8 a.m. to 4 p.m. on the UTSA Main Campus.
-                    </p>
-                                                            <p class="link">
-                        <a href="https://www.utsa.edu/today/2017/10/story/COS-ResearchConf.html" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;">https://www.utsa.edu/today/2017/10/story/COS-ResearchConf.html</a>
-                    </p>
-                                    </div>
-            </div>
-        </td>
     </tr>
-                        <tr>
-        <td style="line-height:18px;padding:0px 0px 18px 0px;">
-            <div class="storyContainer">
-                <div>
-                                        <p class="headline" style="font-size: 12.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.15em;margin-top:0.3em;margin-bottom:0.3em;">Honors College students explore San Antonio’s history as Tricentennial approaches</p>
-                                                            <p class="byline" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">By Kara Soria</p>
-                                                            <p class="source" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">UTSA Today</p>
-                                    </div>
-                <div style="padding:0;font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;margin-top:0.5rem;line-height:1.25em;margin-top:0;">
-                                        <p>
-                        San Antonio is a city that is nearly 300 years old and this fall UTSA Honors College students are researching its history and documenting its rich cultural identity as the city’s Tricentennial celebration approaches.
-
-John Phillip Santos said the idea for his Honors College seminar “Reading, writing and imagining/building San Antonio as a global metropolis” stemmed from the public art component of the San Pedro Creek Improvement Project. The UTSA professor is crafting mythic and historical narrations of the San Pedro Creek’s story that will be inscribed in spaces along the creek.
-                    </p>
-                                                            <p class="link">
-                        <a href="https://www.utsa.edu/today/2017/10/story/SantosSeminar.html" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;">https://www.utsa.edu/today/2017/10/story/SantosSeminar.html</a>
-                    </p>
-                                    </div>
-            </div>
-        </td>
-    </tr>
-
-            <tr>
-          <td class="sectionLine" style="line-height:1px;background:#f15a22; border:solid 1px #f15a22; border-width:1px 0 0 0; height:1px; width:100%; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;"></td>
-        </tr>
-        <tr>
-          <td style="line-height:18px;padding-bottom:10px;">
-            <span class="section" style="font-size:18px;font-family:Arial, Helvetica, sans-serif;font-weight:900;text-transform:uppercase;color:#f15a22;margin-top: 0;letter-spacing: 0.0925em;">Higher Education News</span>
-          </td>
-        </tr>
-                        <tr>
-        <td style="line-height:18px;padding:0px 0px 18px 0px;">
-            <div class="storyContainer">
-                <div>
-                                        <p class="headline" style="font-size: 12.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.15em;margin-top:0.3em;margin-bottom:0.3em;">Georgia State Backed Up Analytics With Support System</p>
-                                                            <p class="byline" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">By  Jamaal Abdul-Alim</p>
-                                                            <p class="source" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">Diverse: Issues in Higher Education</p>
-                                    </div>
-                <div style="padding:0;font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;margin-top:0.5rem;line-height:1.25em;margin-top:0;">
-                                        <p>
-                        The predictive analytics system that administrators here at George State University implemented five years ago has gotten a lot of positive publicity for how it helped the institution become what one administrator describes as the only public university without an achievement gap. But the other part of the story, says Dr. Timothy Renick, vice provost and vice president for enrollment management and student success, was the university’s decision to hire 42 academic advisors to act on the information gleaned from the predictive analytics.
-                    </p>
-                                                            <p class="link">
-                        <a href="http://diverseeducation.com/article/102425/" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;">http://diverseeducation.com/article/102425/</a>
-                    </p>
-                                    </div>
-            </div>
-        </td>
-    </tr>
-                        <tr>
-        <td style="line-height:18px;padding:0px 0px 18px 0px;">
-            <div class="storyContainer">
-                <div>
-                                        <p class="headline" style="font-size: 12.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.15em;margin-top:0.3em;margin-bottom:0.3em;">‘PreparedU’</p>
-                                                            <p class="byline" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">By Scott Jaschik</p>
-                                                            <p class="source" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">Inside Higher Ed</p>
-                                    </div>
-                <div style="padding:0;font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;margin-top:0.5rem;line-height:1.25em;margin-top:0;">
-                                        <p>
-                        Colleges face scrutiny -- from would-be students, their parents and politicians -- over whether they are preparing students for careers. Gloria Cordes Larson has focused on these issues at Bentley University, a business-oriented institution that also takes pride in the general education students receive. Her new book, PreparedU: How Innovative Colleges Drive Student Success (Jossey-Bass), is something of a guide for colleges -- including those institutions far less focused on business than is Bentley -- to how to respond to the demands in this area. The book is also a critique of higher education, suggesting that many academics have failed to focus on these iss
-                    </p>
-                                                            <p class="link">
-                        <a href="https://www.insidehighered.com/news/2017/10/03/university-president-discusses-her-new-book-how-colleges-can-prepare-students" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;">https://www.insidehighered.com/news/2017/10/03/university-president-discusses-her-new-book-how-colleges-can-prepare-students</a>
-                    </p>
-                                    </div>
-            </div>
-        </td>
-    </tr>
-
-            <tr>
-          <td class="sectionLine" style="line-height:1px;background:#f15a22; border:solid 1px #f15a22; border-width:1px 0 0 0; height:1px; width:100%; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;"></td>
-        </tr>
-        <tr>
-          <td style="line-height:18px;padding-bottom:10px;">
-            <span class="section" style="font-size:18px;font-family:Arial, Helvetica, sans-serif;font-weight:900;text-transform:uppercase;color:#f15a22;margin-top: 0;letter-spacing: 0.0925em;">Other Notable Stories</span>
-          </td>
-        </tr>
-                        <tr>
-        <td style="line-height:18px;padding:0px 0px 18px 0px;">
-            <div class="storyContainer">
-                <div>
-                                        <p class="headline" style="font-size: 12.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.15em;margin-top:0.3em;margin-bottom:0.3em;">San Antonians to Examine Emergency Policies in Wake of Vegas Massacre</p>
-                                                            <p class="byline" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">By Iris Dimmick</p>
-                                                            <p class="source" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">The Rivard Report</p>
-                                    </div>
-                <div style="padding:0;font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;margin-top:0.5rem;line-height:1.25em;margin-top:0;">
-                                        <p>
-                        Police and fire departments, business owners, and event organizers in San Antonio are examining their security measures after the massacre at a music festival in Las Vegas on Sunday night. “I’m sure that at the policy level there’s going to be conversation … regarding specific procedures about guns in hotels,” said Liza Barratachea, president and CEO of the San Antonio Hotel and Lodging Association. “And not just for hotels and hotel guests, but open venues.” At least 59 people were killed and more than 500 injured, according to several media reports, after a lone gunman opened fire from a hotel tower into a packed crowd of country music concertgoers near the Las Vegas Strip on Sunday night.
-                    </p>
-                                                            <p class="link">
-                        <a href="https://therivardreport.com/san-antonians-to-examine-emergency-policies-in-wake-of-vegas-massacre/" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;">https://therivardreport.com/san-antonians-to-examine-emergency-policies-in-wake-of-vegas-massacre/</a>
-                    </p>
-                                    </div>
-            </div>
-        </td>
-    </tr>
-
-    <tr>
-      <td class="sectionLine" style="line-height:1px;background:#f15a22; border:solid 1px #f15a22; border-width:1px 0 0 0; height:1px; width:100%; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;"></td>
-    </tr>
-</table>
-
-
-
-
-
-<table align="center" border="0" cellpadding="0" cellspacing="0" style="text-align:left;">
     <tr>
       <td>
-		<p class="footer" style="font-style:italic;font-size:11pt;font-family:Arial, Helvetica, sans-serif;text-transform:normal;color:#000;padding-top:7px;margin-top:7px;padding-bottom:7px;margin-bottom:7px">
-            <span style="font-size:11px; font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;line-height:18px; text-align:left;">
-              UTSA Top Headlines is produced by University Communications and Marketing, the official news source of The University of Texas at San Antonio. Send your feedback to <a href="mailto:news@utsa.edu" style="color:#002a5c;">news@utsa.edu</a>.  Keep up-to-date on UTSA news by visiting
-              <a href="https://www.utsa.edu/today/" style="color:#002a5c;">UTSA Today</a>. Connect with UTSA online at <a href="https://www.facebook.com/utsa" style="color:#002a5c;">Facebook</a>, <a href="https://twitter.com/utsa/" style="color:#002a5c;">Twitter</a>, <a href="https://vimeo.com/utsa" style="color:#002a5c;">Vimeo</a> and <a href="https://instagram.com/utsa/" style="color:#002a5c;">Instagram</a>.
-            </span>
+            <div class="storyContainer">
+                <div>
+                  <p class="headline" style="font-size: 12.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.15em;margin-top:0.3em;margin-bottom:0.3em;">Science students from around the country and Mexico to showcase their research at UTSA</p>
+                  <p class="byline" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">By Courtney Clevenger </p>
+                  <p class="source" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;color:#000;line-height:1.0em;margin-top:0.3em;margin-bottom:0.3em;">UTSA Today</p>
+                </div>
+                <div style="padding:0;font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;color:#000;margin-top:0.5rem;line-height:1.25em;margin-top:0;">
+                  <p>
+                  The University of Texas at San Antonio (UTSA) will transform into a student researcher’s paradise next week as UTSA hosts the College of Sciences Research Conference. More than 1,000 undergraduate and graduate students from UTSA, 10 other Texas institutions, and universities in California, New York and Mexico will present their research at the conference on Friday, Oct. 6 from 8 a.m. to 4 p.m. on the UTSA Main Campus.
+                  </p>
+                  <p class="link">
+                    <a href="https://www.utsa.edu/today/2017/10/story/COS-ResearchConf.html" style="font-size: 10.5pt;font-family:Arial, Helvetica, sans-serif;font-weight:600;text-transform:normal;">https://www.utsa.edu/today/2017/10/story/COS-ResearchConf.html</a>
+                  </p>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Honors College students explore San Antonio's history as Tricentennial approaches</p>
+        <p>By Kara Soria</p>
+        <p>UTSA Today</p>
+        <p>
+              San Antonio is a city that is nearly 300 years old and this fall UTSA Honors College students are researching its history and documenting
+              its rich cultural identity as the city's Tricentennial celebration approaches. John Phillip Santos said the idea for his Honors College
+              seminar "Reading, writing and imagining/building San Antonio as a global metropolis" stemmed from the public art component of the San
+              Pedro Creek Improvement Project. The UTSA professor is crafting mythic and historical narrations of the San Pedro Creek's story that
+              will be inscribed in spaces along the creek.
         </p>
-        <br/>
+        <p>
+          <a href="https://www.utsa.edu/today/2017/10/story/SantosSeminar.html">https://www.utsa.edu/today/2017/10/story/SantosSeminar.html</a>
+        </p>
       </td>
     </tr>
+
+  </tbody>
 </table>
-</td>
-<td class="side" width="50%"></td>
-</tr>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="text-align:left;margin:0;">
+  <tr>
+    <td class="sectionLine" style="line-height:1px;background:#f15a22; border:solid 1px #f15a22; border-width:1px 0 0 0; height:1px;margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;"></td>
+  </tr>
+  <tr>
+    <td>
+	<p class="footer" style="font-style:italic;font-size:11pt;font-family:Arial, Helvetica, sans-serif;text-transform:normal;color:#000;padding-top:7px;margin-top:7px;padding-bottom:7px;margin-bottom:7px">
+          <span style="font-size:11px; font-family:Arial, Helvetica, sans-serif;font-weight:300;text-transform:normal;line-height:18px; text-align:left;">
+            UTSA Top Headlines is produced by University Communications and Marketing, the official news source of The University of Texas at San Antonio. Send your feedback to <a href="mailto:news@utsa.edu" style="color:#002a5c;">news@utsa.edu</a>.  Keep up-to-date on UTSA news by visiting
+            <a href="https://www.utsa.edu/today/" style="color:#002a5c;">UTSA Today</a>. Connect with UTSA online at <a href="https://www.facebook.com/utsa" style="color:#002a5c;">Facebook</a>, <a href="https://twitter.com/utsa/" style="color:#002a5c;">Twitter</a>, <a href="https://vimeo.com/utsa" style="color:#002a5c;">Vimeo</a> and <a href="https://instagram.com/utsa/" style="color:#002a5c;">Instagram</a>.
+          </span>
+      </p>
+      <br/>
+    </td>
+  </tr>
 </table>
+
+
+
+
+        </td>
+        <!--[if !mso]><!-->
+        <td class="side" id="rightside"></td>
+        <!--<![endif]-->
+        <!--[if gte mso 9]>
+        <td class="side" id="rightside" width="50%"></td>
+        <![endif]-->
+      </tr>
+    </tbody>
+  </table>
 </body>
-</html>

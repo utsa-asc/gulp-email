@@ -10,15 +10,29 @@ var smtpInfo = {
 };
 
 var src = {
-  html: "app/*.html"
+  html: "app/**/*.html"
 };
 
 gulp.task('email', function () {
-  return gulp.src('./app/test.html')
+  return gulp.src('./app/inauguration/invite-delegate.html')
     .pipe(email({
-      subject: 'We are UTSA! - GULP EMAIL',
+      subject: 'We are UTSA! - INAUGURATION INVITE',
       to: [
         'john.garza@utsa.edu'
+      ],
+      from: 'WebTeam <webteam@utsa.edu>',
+      smtp: smtpInfo
+    }));
+});
+
+gulp.task('emails', function () {
+  return gulp.src('./app/inauguration/invite-delegate.html')
+    .pipe(email({
+      subject: 'We are UTSA! - INAUGURATION INVITE',
+      to: [
+        'john.garza@utsa.edu',
+        'utsawams.runme@previews.emailonacid.com',
+        'garza@cjas.org'
       ],
       from: 'WebTeam <webteam@utsa.edu>',
       smtp: smtpInfo
