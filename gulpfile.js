@@ -14,7 +14,7 @@ var src = {
 };
 
 gulp.task('email', function () {
-  return gulp.src('./app/inauguration/invite-delegate.html')
+  return gulp.src('./app/inauguration/invite.html')
     .pipe(email({
       subject: 'We are UTSA! - INAUGURATION INVITE',
       to: [
@@ -26,7 +26,7 @@ gulp.task('email', function () {
 });
 
 gulp.task('emails', function () {
-  return gulp.src('./app/inauguration/invite-delegate.html')
+  return gulp.src('./app/inauguration/invite-faculty.html')
     .pipe(email({
       subject: 'We are UTSA! - INAUGURATION INVITE',
       to: [
