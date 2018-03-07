@@ -14,9 +14,18 @@ var src = {
 };
 
 gulp.task('email', function () {
-  return gulp.src('./app/inauguration/reminder.html')
+  gulp.src('./app/inauguration/reminder-external.html')
     .pipe(email({
-      subject: 'We are UTSA! - INAUGURATION INVITE',
+      subject: 'We are UTSA! - INAUGURATION REMINDER EXTERNAL',
+      to: [
+        'john.garza@utsa.edu'
+      ],
+      from: 'WebTeam <webteam@utsa.edu>',
+      smtp: smtpInfo
+    }));
+  return gulp.src('./app/inauguration/reminder-faculty.html')
+    .pipe(email({
+      subject: 'We are UTSA! - INAUGURATION REMINDER FACULTY',
       to: [
         'john.garza@utsa.edu'
       ],
