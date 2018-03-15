@@ -35,13 +35,12 @@ gulp.task('email', function () {
 });
 
 gulp.task('emails', function () {
-  return gulp.src('./app/inauguration/reminder.html')
+  return gulp.src('./app/inauguration/reminder-external-03162018.html')
     .pipe(email({
       subject: 'We are UTSA! - INAUGURATION INVITE',
       to: [
         'john.garza@utsa.edu',
-        'utsawams.runme@previews.emailonacid.com',
-        'garza@cjas.org'
+        'utsawams.runme@previews.emailonacid.com'
       ],
       from: 'WebTeam <webteam@utsa.edu>',
       smtp: smtpInfo
