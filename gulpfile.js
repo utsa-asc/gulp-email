@@ -14,18 +14,21 @@ var src = {
 };
 
 gulp.task('email', function () {
-  gulp.src('./app/inauguration/reminder-external.html')
+  /*
+  gulp.src('./app/PRES/pres-vision.html')
     .pipe(email({
-      subject: 'We are UTSA! - INAUGURATION REMINDER EXTERNAL',
+      subject: 'We are UTSA! - TESTING | President Vision',
       to: [
         'john.garza@utsa.edu'
       ],
       from: 'WebTeam <webteam@utsa.edu>',
       smtp: smtpInfo
     }));
-  return gulp.src('./app/inauguration/reminder-faculty.html')
+    */
+
+  return gulp.src('./app/PRES/pres-test.html')
     .pipe(email({
-      subject: 'We are UTSA! - INAUGURATION REMINDER FACULTY',
+      subject: 'We are UTSA! - TESTING | PRES MESSAGE TEMPLATE',
       to: [
         'john.garza@utsa.edu'
       ],
@@ -35,9 +38,9 @@ gulp.task('email', function () {
 });
 
 gulp.task('emails', function () {
-  return gulp.src('./app/inauguration/reminder-external-03162018.html')
+  return gulp.src('./app/PRES/pres-vision.html')
     .pipe(email({
-      subject: 'We are UTSA! - INAUGURATION INVITE',
+      subject: 'We are UTSA! - TESTING | President Template',
       to: [
         'john.garza@utsa.edu',
         'utsawams.runme@previews.emailonacid.com'
