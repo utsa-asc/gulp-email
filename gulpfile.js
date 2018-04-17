@@ -1,8 +1,8 @@
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var gulpIf      = require('gulp-if');
-var reload      = browserSync.reload;
-var email       = require('gulp-mail');
+var gulpIf = require('gulp-if');
+var reload = browserSync.reload;
+var email = require('gulp-mail');
 var smtpInfo = {
   host: 'osmtp.utsa.edu',
   secureConnection: false,
@@ -13,7 +13,7 @@ var src = {
   html: "app/**/*.html"
 };
 
-gulp.task('email', function () {
+gulp.task('email', function() {
   /*
   gulp.src('./app/PRES/pres-vision.html')
     .pipe(email({
@@ -26,9 +26,9 @@ gulp.task('email', function () {
     }));
     */
 
-  return gulp.src('./app/PRES/pres-test.html')
+  return gulp.src('./app/events/utsa-dc-invite.html')
     .pipe(email({
-      subject: 'We are UTSA! - TESTING | PRES MESSAGE TEMPLATE',
+      subject: 'We are UTSA! - TESTING | UTSA DC VISIT ',
       to: [
         'john.garza@utsa.edu'
       ],
@@ -37,10 +37,10 @@ gulp.task('email', function () {
     }));
 });
 
-gulp.task('emails', function () {
-  return gulp.src('./app/PRES/pres-vision.html')
+gulp.task('emails', function() {
+  return gulp.src('./app/events/utsa-dc-invite.html')
     .pipe(email({
-      subject: 'We are UTSA! - TESTING | President Template',
+      subject: 'We are UTSA! - TESTING | UTSA DC VISIT ',
       to: [
         'john.garza@utsa.edu',
         'utsawams.runme@previews.emailonacid.com'
@@ -51,13 +51,13 @@ gulp.task('emails', function () {
 });
 
 gulp.task('serve', function() {
-    browserSync.init({
-        server: {
-            baseDir: './app',
-        }
-    });
-    gulp.watch(src.html, reload);
-    gulp.watch(src.js, reload);
+  browserSync.init({
+    server: {
+      baseDir: './app',
+    }
+  });
+  gulp.watch(src.html, reload);
+  gulp.watch(src.js, reload);
 });
 
 gulp.task('default', ['serve']);
