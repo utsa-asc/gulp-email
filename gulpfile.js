@@ -13,7 +13,7 @@ var src = {
   html: "app/**/*.html"
 };
 
-gulp.task('email', function() {
+gulp.task('email-single', function() {
   /*
   gulp.src('./app/PRES/pres-vision.html')
     .pipe(email({
@@ -26,9 +26,9 @@ gulp.task('email', function() {
     }));
     */
 
-  return gulp.src('./app/events/utsa-dc-invite.html')
+  return gulp.src('./app/PRES/pres-vision.html')
     .pipe(email({
-      subject: 'We are UTSA! - TESTING | UTSA DC VISIT ',
+      subject: 'We are UTSA! - TESTING | President Vision',
       to: [
         'john.garza@utsa.edu'
       ],
@@ -37,27 +37,45 @@ gulp.task('email', function() {
     }));
 });
 
-gulp.task('emails', function() {
+gulp.task('email-multiple', function(done) {
   return gulp.src('./app/events/utsa-dc-invite.html')
     .pipe(email({
       subject: 'We are UTSA! - TESTING | UTSA DC VISIT ',
       to: [
         'john.garza@utsa.edu',
-        'utsawams.runme@previews.emailonacid.com'
+        'webteam@utsa.edu'
+//        'utsawams.runme@previews.emailonacid.com'
       ],
       from: 'WebTeam <webteam@utsa.edu>',
       smtp: smtpInfo
     }));
 });
 
-gulp.task('serve', function() {
+gulp.task('serve', function(cb) {
   browserSync.init({
     server: {
       baseDir: './app',
-    }
+      routes : {
+        '/node_modules' : './node_modules'
+      }
+    },
+    port: 3000,
+    notify: true,
+    open: false
   });
-  gulp.watch(src.html, reload);
-  gulp.watch(src.js, reload);
+
+  gulp.watch(src.html).on('change', reload);
+
 });
 
-gulp.task('default', ['serve']);
+gulp.task('email', gulp.series('email-single', function(done) {
+  done();
+}));
+
+gulp.task('emails', gulp.series('email-multiple', function(done) {
+  done();
+}));
+
+gulp.task('default', gulp.series('serve', function(done) {
+  done();
+}));

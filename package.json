@@ -4,11 +4,12 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-email": "0.0.7",
+    "browser-sync": "^2.24.4",
+    "gulp": "^4.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-mail": "^0.2.0"
+    "gulp-mail": "*",
+    "gulp-replace": "^0.6.1",
+    "gulp-util": "^3.0.8"
   },
   "devDependencies": {},
   "scripts": {
