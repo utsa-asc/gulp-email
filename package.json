@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^3.0.4",
-    "gulp": "^4.0.0",
+    "gulp": "^5.0.1",
     "gulp-if": "^2.0.2",
     "gulp-mail": "*",
     "nodemailer": ">=6.6.1",
